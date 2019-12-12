@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://getwall.net/wp-content/uploads/2019/04/Nature-Background-HD.jpg');
+    border-style: solid;
+    background-size: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+marquee {
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+    margin-top: 0;
+}
+
+address {
+    text-align: center;
+}
+
+.icon {
+    width: 50px;
+}
+
+.salmon {
+    margin: 10px;
+    width: 300px;
+}

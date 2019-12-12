@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>salad</title>
+    <link href="https://fonts.googleapis.com/css?family=Acme|Dancing+Script|Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sales.css">
+</head>
+
+<body>
+    <p>Cookies Around The World</p>
+    <h1>
+        Sales
+    </h1>
+    <nav>
+        <ul>
+            <li> <a href="welcome.html">Hello</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sales.html">Sales</a></li>
+        </ul>
+    </nav>
+
+    <form id="newC">
+        <fieldset>
+            <legend>Info</legend>
+            <label class="first">City Name: </label>
+            <input class="first" type="text" name="cityName">
+            <label class="second">Minimum Number Of Customres: </label>
+            <input class="second" type="text" name="minNum"> <br>
+            <label class="third">Maxmum Number Of Customres: </label>
+            <input class="third" type="text" name="maxNum">
+            <label class="fourth">Average Number Of Sales: </label>
+            <input class="fourth" type="text" step="0.1" name="avgNum">
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="cookies">
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
