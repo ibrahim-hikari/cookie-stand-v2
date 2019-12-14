@@ -36,16 +36,13 @@ Cities.prototype.generateHourlySales = function () {
 }
 
 Cities.prototype.row = function () {
-    $('table').append(tableRwo.html(tableCell.text(this.name)));
+    $('table').append($(`<tr id= "${this.name}"><td>${this.name}</td></tr>`));
 
     for (let i = 0; i < this.hoursSalesArr.length; i++) {
-        let currentHourlySales = this.hoursSalesArr[i];
-        $('tr').append($(`<td>${currentHourlySales}</td>`))
-        console.log(currentHourlySales);
+        $(`#${this.name}`).append($(`<td>${this.hoursSalesArr[i]}</td>`))
     }
 
-
-    $('tr').append($(`<td>${this.cookiesSalesTotal}</td>`))
+    $(`#${this.name}`).append($(`<td>${this.cookiesSalesTotal}</td>`))
 
 }
 
@@ -70,7 +67,6 @@ Cities.prototype.render = function () {
 
     for (let i = 0; i < this.hoursSalesArr.length; i++) {
         $(`.${this.name}`).append($(`<td>${this.hoursSalesArr[i]}</td>`))
-        console.log(this.hoursSalesArr[i]);
     }
 
     $(`.${this.name}`).append($(`<td>${this.cookiesSalesTotal}</td>`))
@@ -116,3 +112,29 @@ for (let i = 0; i < cities.length; i++) {
 
 footerRow();
 
+let existName = {};
+
+$('#newC').submit(function (e) {
+    e.preventDefault();
+
+    let name = event.target.cityName.value;
+    let min = parseInt(event.target.minNum.value);
+    let max = parseInt(event.target.maxNum.value);
+    let avg = parseFloat(event.target.avgNum.value);
+
+    let newC = new Cities(name, min, max, avg);
+
+    cities.push(newC);
+    console.log('cityName', name);
+    console.log('hello', existName);
+
+
+    if (!existName[name]) {
+        existName[name] = true;
+        $('.foot').remove();
+        newC.row();
+        footerRow();
+    } else {
+        alert('you already have this city!!!')
+    }
+});
