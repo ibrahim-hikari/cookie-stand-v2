@@ -4,8 +4,8 @@
 }
 
 body {
-    background-image: url('https://getwall.net/wp-content/uploads/2019/04/Nature-Background-HD.jpg');
-    border-style: solid;
+    background-image: url('https://www.itl.cat/pngfile/big/122-1228829_cookie-monster-backgrounds-wallpaper-cool-cookie-monster-background.jpg');
+    /* border-style: solid; */
     background-size: 100%;
 }
 
@@ -14,17 +14,60 @@ header {
 }
 
 marquee {
-    font-size: 60px;
+    font-size: 90px;
     font-family: 'Pacifico', cursive;
-    margin-top: 0;
+    color: rgb(146, 92, 41);
+    text-shadow: 3px 2px rgb(45, 210, 30);
+}
+
+marquee span {
+    position: relative;
+    top: -40px;
 }
 
 address {
     text-align: center;
+    width: 60%;
+    height: 200px;
+    position: relative;
+    top: 50%;
+    left: 10%;
+    /* border-style: solid; */
+    font-size: 50px;
+    color: rgb(172, 59, 55);
+}
+
+ul {
+    /* border-style: solid; */
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    text-align: center;
+    width: 60%;
+    font-size: 50px;
+    list-style-type: none;
+    font-family: 'Acme', sans-serif;
+}
+
+ul a {
+    color: crimson;
+    text-shadow: 2px 3px rgb(114, 114, 168);
+    text-decoration: none;
+}
+
+address a {
+    text-decoration: none;
+    color: rgb(172, 59, 55);
+    text-shadow: 2px 2px rgb(7, 194, 116);
+
 }
 
 .icon {
     width: 50px;
+    position: absolute;
+    left: 10px;
+    /* border-style: solid; */
+    margin-top: 10px;
 }
 
 .salmon {
